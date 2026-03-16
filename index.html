@@ -3,847 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristyle Lenoir · Haute Couture · Créatrice de mode</title>
-    <!-- META SEO & OPEN GRAPH -->
+    <title>Kristyle Lenoir · Maison de Couture · Créatrice de mode</title>
+    
+    <!-- META SEO -->
     <meta name="description" content="Kristyle Lenoir – créatrice de mode, dessinatrice, styliste et modéliste. L'élégance a un nom. Découvrez les collections haute couture et sur-mesure.">
-    <meta name="keywords" content="mode, haute couture, styliste, création sur mesure, robe soirée, Paris">
-    <meta property="og:title" content="Kristyle Lenoir · Maison de Couture">
+    <meta name="keywords" content="mode, haute couture, styliste, création sur mesure, robe soirée, Paris, créatrice française">
+    <meta name="author" content="Kristyle Lenoir">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://kristylelenoir.com/og-image.jpg">
+    <meta property="og:url" content="https://kristylelenoir.com/">
+    <meta property="og:title" content="Kristyle Lenoir · Maison de Couture">
     <meta property="og:description" content="Où la mode devient art. Découvrez l'univers d'une créatrice d'exception.">
-    <!-- POLICES & ICONS -->
+    <meta property="og:image" content="https://kristylelenoir.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kristylelenoir.com/">
+    <meta property="twitter:title" content="Kristyle Lenoir · Maison de Couture">
+    <meta property="twitter:description" content="Où la mode devient art. Découvrez l'univers d'une créatrice d'exception.">
+    <meta property="twitter:image" content="https://kristylelenoir.com/images/og-image.jpg">
+    
+    <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- AOS (Animate On Scroll) -->
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        /* ===== VARIABLES & RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --deep-black: #0a0a0a;
-            --black-soft: #1a1a1a;
-            --violet-royal: #6B21A8;
-            --violet-soft: #9333EA;
-            --violet-mist: rgba(147, 51, 234, 0.15);
-            --gold-warm: #C9A84C;
-            --gold-light: #e5d4a6;
-            --off-white: #F5F0EB;
-            --gray-elegant: #c9c1b7;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Raleway', sans-serif;
-            --transition-slow: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            --transition: all 0.3s ease;
-            --shadow-heavy: 0 20px 40px -10px rgba(0,0,0,0.8);
-            --shadow-gold: 0 10px 30px -5px rgba(201, 168, 76, 0.2);
-        }
-
-        body {
-            background-color: var(--deep-black);
-            color: var(--off-white);
-            font-family: var(--font-sans);
-            font-weight: 300;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-serif);
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-
-        h2 {
-            font-size: 3.2rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 90px;
-            height: 2.5px;
-            background: linear-gradient(90deg, var(--gold-warm), transparent);
-        }
-        .section {
-            padding: 120px 10%;
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-        .section-light {
-            background-color: var(--off-white);
-            color: var(--deep-black);
-        }
-        .section-light h2:after {
-            background: linear-gradient(90deg, var(--violet-royal), transparent);
-        }
-        .btn {
-            display: inline-block;
-            padding: 1rem 3rem;
-            background: transparent;
-            border: 1.5px solid var(--gold-warm);
-            color: var(--gold-warm);
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gold-warm);
-            transition: left 0.4s;
-            z-index: -1;
-        }
-        .btn:hover {
-            color: var(--deep-black);
-        }
-        .btn:hover:before {
-            left: 0;
-        }
-
-        /* ===== NAVIGATION LUXE ===== */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 1.8rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            transition: all 0.4s;
-            mix-blend-mode: exclusion;
-        }
-        .navbar.scrolled {
-            background: rgba(10,10,10,0.95);
-            backdrop-filter: blur(8px);
-            padding: 1rem 10%;
-            mix-blend-mode: normal;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.25);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-        }
-        .logo-kln {
-            width: 70px;
-            height: 70px;
-            background: var(--deep-black);
-            border: 2px solid var(--gold-warm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 800;
-            font-family: var(--font-serif);
-            color: var(--gold-warm);
-            transition: var(--transition);
-            letter-spacing: 3px;
-        }
-        .logo-kln:hover {
-            background: var(--gold-warm);
-            color: var(--deep-black);
-            transform: scale(1.02);
-        }
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-        }
-        .nav-links a {
-            color: var(--off-white);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            padding-bottom: 5px;
-            border-bottom: 1px solid transparent;
-            transition: var(--transition);
-            position: relative;
-        }
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--gold-warm);
-            transition: width 0.3s;
-        }
-        .nav-links a:hover:after,
-        .nav-links a.active:after {
-            width: 100%;
-        }
-        .lang-toggle {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.9rem;
-            font-weight: 300;
-            color: var(--off-white);
-        }
-        .lang-toggle span {
-            cursor: pointer;
-            opacity: 0.5;
-            transition: var(--transition);
-            letter-spacing: 1px;
-        }
-        .lang-toggle span.active {
-            opacity: 1;
-            color: var(--gold-warm);
-            font-weight: 500;
-        }
-
-        /* ===== HERO CINÉMATIQUE ===== */
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: var(--deep-black);
-        }
-        .hero-particles {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 40%, rgba(201,168,76,0.08) 0%, transparent 35%),
-                        radial-gradient(circle at 80% 70%, rgba(147,51,234,0.08) 0%, transparent 45%);
-            z-index: 1;
-        }
-        .hero-particles canvas {
-            display: block;
-            width: 100%;
-            height: 100%;
-            opacity: 0.4;
-        }
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 4rem;
-            padding: 0 10%;
-            width: 100%;
-            position: relative;
-            z-index: 5;
-        }
-        .hero-text {
-            animation: fadeUp 1.2s ease-out;
-        }
-        .hero-surtitle {
-            font-size: 0.9rem;
-            letter-spacing: 6px;
-            color: var(--gold-warm);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
-        .hero-text h1 {
-            font-size: 5.2rem;
-            line-height: 1;
-            margin-bottom: 1.8rem;
-            font-weight: 700;
-        }
-        .hero-text h1 span {
-            color: var(--gold-warm);
-            font-style: italic;
-            display: block;
-            font-size: 4rem;
-            margin-top: 0.5rem;
-        }
-        .hero-desc {
-            font-size: 1.2rem;
-            max-width: 450px;
-            margin-bottom: 2.8rem;
-            opacity: 0.85;
-            font-weight: 300;
-        }
-        .hero-image {
-            position: relative;
-            height: 70vh;
-            min-height: 600px;
-            background: var(--black-soft);
-            box-shadow: var(--shadow-heavy);
-            overflow: hidden;
-            border: 1px solid rgba(201,168,76,0.25);
-        }
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-            transition: transform 8s ease;
-        }
-        .hero-image:hover img {
-            transform: scale(1.05);
-        }
-        .hero-badge {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            background: rgba(10,10,10,0.8);
-            backdrop-filter: blur(4px);
-            padding: 0.8rem 2rem;
-            border-left: 3px solid var(--gold-warm);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: var(--gold-warm);
-        }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== ABOUT ===== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        .about-portrait {
-            background: linear-gradient(145deg, #2a241c, #0f0e0c);
-            height: 600px;
-            width: 100%;
-            position: relative;
-            border: 2px solid var(--gold-warm);
-            box-shadow: 30px 30px 0 rgba(201,168,76,0.15);
-            overflow: hidden;
-        }
-        .about-portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.9;
-            mix-blend-mode: luminosity;
-            transition: var(--transition-slow);
-        }
-        .about-portrait:hover img {
-            transform: scale(1.02);
-            mix-blend-mode: normal;
-        }
-        .timeline {
-            display: flex;
-            gap: 2.5rem;
-            margin-top: 2.8rem;
-            flex-wrap: wrap;
-        }
-        .timeline-item {
-            border-left: 2px solid var(--violet-royal);
-            padding-left: 1.5rem;
-        }
-        .timeline-year {
-            font-weight: 700;
-            color: var(--violet-royal);
-            font-size: 1.6rem;
-            font-family: var(--font-serif);
-        }
-
-        /* ===== GALERIE DYNAMIQUE ===== */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3px;
-            background: var(--deep-black);
-            margin-top: 2rem;
-        }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            cursor: pointer;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(10,10,10,0.95), transparent 60%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        .gallery-overlay h4 {
-            color: var(--gold-warm);
-            font-size: 1.5rem;
-            transform: translateY(20px);
-            transition: transform 0.5s 0.1s;
-        }
-        .gallery-item:hover .gallery-overlay h4 {
-            transform: translateY(0);
-        }
-        .gallery-overlay p {
-            transform: translateY(20px);
-            transition: transform 0.5s 0.2s;
-            font-size: 0.9rem;
-        }
-        .gallery-item:hover .gallery-overlay p {
-            transform: translateY(0);
-        }
-
-        /* ===== LOOKBOOK ===== */
-        .lookbook {
-            display: flex;
-            flex-direction: column;
-            gap: 6rem;
-        }
-        .lookbook-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .lookbook-media {
-            height: 550px;
-            background: #222;
-            box-shadow: 20px 20px 0 var(--violet-royal);
-            overflow: hidden;
-            position: relative;
-        }
-        .lookbook-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 6s;
-        }
-        .lookbook-media:hover img {
-            transform: scale(1.03);
-        }
-        .lookbook-text h3 {
-            font-size: 2.8rem;
-            color: var(--violet-royal);
-            margin-bottom: 1rem;
-        }
-
-        /* ===== SERVICES CARTES ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-        .service-card {
-            text-align: center;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(201,168,76,0.15);
-            transition: var(--transition);
-            background: rgba(255,255,255,0.02);
-            backdrop-filter: blur(4px);
-        }
-        .service-card:hover {
-            border-color: var(--gold-warm);
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-gold);
-            background: rgba(201,168,76,0.02);
-        }
-        .service-card i {
-            font-size: 3rem;
-            color: var(--gold-warm);
-            margin-bottom: 1.8rem;
-        }
-        .service-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        /* ===== ACTUALITÉS / BLOG ===== */
-        .actu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-        .actu-card {
-            background: white;
-            padding: 2rem;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
-        }
-        .actu-card:hover {
-            border-bottom-color: var(--violet-royal);
-            transform: translateY(-5px);
-        }
-        .actu-date {
-            color: var(--violet-royal);
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-        .actu-card h4 {
-            font-size: 1.6rem;
-            margin: 1rem 0;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid rgba(201,168,76,0.25);
-            padding: 1.2rem 0;
-            margin-bottom: 2rem;
-            color: var(--off-white);
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            outline: none;
-            transition: var(--transition);
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-bottom-color: var(--gold-warm);
-            padding-left: 1rem;
-        }
-        .contact-form button {
-            background: transparent;
-            border: 1.5px solid var(--gold-warm);
-            color: var(--gold-warm);
-            padding: 1rem 3rem;
-            font-size: 1rem;
-            letter-spacing: 3px;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 1rem;
-        }
-        .contact-form button:hover {
-            background: var(--gold-warm);
-            color: var(--deep-black);
-        }
-        .contact-info p {
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-        }
-        .contact-info i {
-            color: var(--gold-warm);
-            width: 35px;
-            font-size: 1.3rem;
-        }
-        .social-links {
-            margin-top: 2.5rem;
-            display: flex;
-            gap: 2rem;
-            font-size: 2rem;
-        }
-        .social-links a {
-            color: var(--off-white);
-            transition: var(--transition);
-        }
-        .social-links a:hover {
-            color: var(--gold-warm);
-            transform: translateY(-3px);
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            padding: 3rem 10%;
-            border-top: 1px solid rgba(201,168,76,0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        .mini-kln {
-            width: 55px;
-            height: 55px;
-            border: 2px solid var(--gold-warm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--gold-warm);
-        }
-
-        /* ===== MOBILE RESPONSIVE ===== */
-        @media (max-width: 1100px) {
-            .section { padding: 80px 5%; }
-            .hero-container,
-            .about-grid,
-            .contact-container,
-            .lookbook-item {
-                grid-template-columns: 1fr;
-            }
-            .services-grid,
-            .actu-grid,
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .nav-links { display: none; }
-            h2 { font-size: 2.5rem; }
-        }
-        @media (max-width: 600px) {
-            .services-grid,
-            .actu-grid,
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-logo">KLN</div>
+    </div>
+
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
-        <div class="logo">
-            <div class="logo-kln">KLN</div>
-        </div>
-        <div class="nav-links">
-            <a href="#accueil" class="active">Accueil</a>
-            <a href="#a-propos">Savoir‑faire</a>
-            <a href="#creations">Créations</a>
-            <a href="#collections">Collections</a>
-            <a href="#services">Services</a>
-            <a href="#actualites">Presse</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="lang-toggle">
-            <span class="active">FR</span>
-            <span>EN</span>
+        <div class="nav-container">
+            <a href="#accueil" class="logo">
+                <div class="logo-kln">KLN</div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="active">Accueil</a></li>
+                    <li><a href="#a-propos">À Propos</a></li>
+                    <li><a href="#creations">Créations</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#actualites">Actualités</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <div class="lang-toggle">
+                    <span class="active">FR</span>
+                    <span>EN</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ACCUEIL HERO -->
     <section id="accueil" class="hero">
-        <div class="hero-particles">
-            <canvas id="particleCanvas"></canvas>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+                <span class="hero-subtitle">Kristyle Lenoir</span>
+                <h1 class="hero-title">L'élégance <span>a un nom.</span></h1>
+                <p class="hero-description">Dessinatrice, couturière, styliste — la haute couture réinventée, entre héritage parisien et audace contemporaine.</p>
+                <div class="hero-btns">
+                    <a href="#creations" class="btn btn-primary">Découvrir l'univers</a>
+                    <a href="#contact" class="btn btn-outline">Contact</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Création Kristyle Lenoir">
+                    <div class="hero-badge">Collection Privée 2025</div>
+                </div>
+            </div>
         </div>
-        <div class="hero-container">
-            <div class="hero-text">
-                <div class="hero-surtitle">Kristyle Lenoir</div>
-                <h1>L'élégance <span>a un nom.</span></h1>
-                <p class="hero-desc">Dessinatrice, couturière, styliste — la haute couture réinventée, entre héritage parisien et audace contemporaine.</p>
-                <a href="#creations" class="btn">Explorer l'univers</a>
-            </div>
-            <div class="hero-image">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='1000' viewBox='0 0 400 600'%3E%3Crect width='400' height='600' fill='%232a241c'/%3E%3Cpath d='M130,160 Q200,70 280,160 L320,430 Q200,480 80,430Z' fill='%233a2a1f' opacity='0.9'/%3E%3C/svg%3E" alt="Robe signature Kristyle Lenoir">
-                <div class="hero-badge">Collection Privée 2025</div>
-            </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- À Propos -->
-    <section id="a-propos" class="section section-light">
-        <div class="about-grid">
-            <div class="about-portrait" data-aos="fade-right" data-aos-duration="1000">
-                <img src="data:image/svg+xml,%3Csvg fill='%233d352b' xmlns='http://www.w3.org/2000/svg' width='600' height='800'/%3E" alt="Portrait Kristyle Lenoir">
-            </div>
-            <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-                <h2>Kristyle Lenoir</h2>
-                <p style="font-size: 1.2rem;">« La mode est une architecture en mouvement : chaque couture raconte une émotion, chaque tissu dialogue avec la lumière. »</p>
-                <p>Formée aux grandes maisons, Kristyle ouvre son atelier en 2015. Sa signature : des lignes sculpturales, des tons profonds rehaussés d’or, une féminité à la fois puissante et délicate. Reconnue pour ses robes de soirée aux drapés architecturés, elle habille une clientèle internationale en quête d’unicité.</p>
-                <div class="timeline">
-                    <div class="timeline-item"><span class="timeline-year">2012</span> Diplôme de modélisme, École Duperré</div>
-                    <div class="timeline-item"><span class="timeline-year">2015</span> Première collection « Nocturne »</div>
-                    <div class="timeline-item"><span class="timeline-year">2022</span> Atelier rive gauche</div>
-                    <div class="timeline-item"><span class="timeline-year">2025</span> Invitée à la Fashion Week</div>
+    <!-- À PROPOS -->
+    <section id="a-propos" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Kristyle Lenoir">
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <span class="section-subtitle">À propos</span>
+                    <h2 class="section-title">Kristyle Lenoir, la mode comme langage d'exception</h2>
+                    <p class="about-text">Créatrice de mode, dessinatrice, couturière, styliste et modéliste, Kristyle Lenoir imagine des silhouettes qui conjuguent force, grâce et précision. Chaque pièce naît d'un geste artistique, d'une ligne pensée, d'un tombé maîtrisé et d'un sens profond du détail.</p>
+                    <p class="about-text">Entre maison de couture contemporaine et atelier d'auteur, l'univers KLN sublime la féminité par des créations sensibles, structurées et intemporelles.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">2012</span>
+                            <h4>Dessin</h4>
+                            <p>Croquis d'inspiration, recherche des lignes, équilibre des volumes.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2015</span>
+                            <h4>Patronage</h4>
+                            <p>Construction précise, étude des coupes et architecture du vêtement.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2020</span>
+                            <h4>Couture</h4>
+                            <p>Assemblage, finitions et exigence artisanale à chaque étape.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2025</span>
+                            <h4>Collections</h4>
+                            <p>Naissance de séries cohérentes, visuelles et profondément narratives.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Créations / Portfolio -->
-    <section id="creations" class="section">
-        <h2 style="color: var(--off-white);">Créations récentes</h2>
-        <div class="gallery">
-            <div class="gallery-item"><img src="data:image/svg+xml,%3Csvg fill='%232c2823' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Robe Opéra"><div class="gallery-overlay"><h4>Opéra Nocturne</h4><p>Robes de soirée · 2025</p></div></div>
-            <div class="gallery-item"><img src="data:image/svg+xml,%3Csvg fill='%23222222' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Tailleur Violet"><div class="gallery-overlay"><h4>Volute Sacrée</h4><p>Haute couture</p></div></div>
-            <div class="gallery-item"><img src="data:image/svg+xml,%3Csvg fill='%23332f2a' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Croquis plume"><div class="gallery-overlay"><h4>Étude noire</h4><p>Croquis & illustrations</p></div></div>
-            <div class="gallery-item"><img src="data:image/svg+xml,%3Csvg fill='%231e1e1e' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Manteau or"><div class="gallery-overlay"><h4>Silence d'Or</h4><p>Prêt-à-porter</p></div></div>
-        </div>
-    </section>
-
-    <!-- Collections / Lookbook -->
-    <section id="collections" class="section section-light">
-        <h2>Collections</h2>
-        <div class="lookbook">
-            <div class="lookbook-item" data-aos="fade-up">
-                <div class="lookbook-media"><img src="data:image/svg+xml,%3Csvg fill='%233d352b' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Collection Sous la Lune"></div>
-                <div class="lookbook-text"><h3>SOUS LA LUNE</h3><p>Hiver 2025 — Velours, crêpes noirs, broderies or pâle. Une inspiration opéra, entre ombre et lumière.</p></div>
+    <!-- CRÉATIONS / PORTFOLIO -->
+    <section id="creations" class="section creations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Créations</span>
+                <h2 class="section-title">Un portfolio pensé comme une galerie</h2>
             </div>
-            <div class="lookbook-item" data-aos="fade-up">
-                <div class="lookbook-text"><h3>ARCHITECTURE SACRÉE</h3><p>Printemps 2025 — Structures géométriques, drapés violets, transparences. Un hommage aux voûtes célestes.</p></div>
-                <div class="lookbook-media"><img src="data:image/svg+xml,%3Csvg fill='%232a241c' xmlns='http://www.w3.org/2000/svg'/%3E" alt="Collection Architecture Sacrée"></div>
+            
+            <div class="filter-container" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="evening">Robes de soirée</button>
+                <button class="filter-btn" data-filter="ready">Prêt-à-porter</button>
+                <button class="filter-btn" data-filter="couture">Haute couture</button>
+                <button class="filter-btn" data-filter="sketches">Croquis & Illustrations</button>
+                <button class="filter-btn" data-filter="collections">Collections</button>
+            </div>
+            
+            <div class="gallery" id="gallery">
+                <!-- Les éléments seront générés par JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-        <h2 style="color: var(--off-white);">Savoir‑faire</h2>
-        <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="0"><i class="fa-regular fa-scissors"></i><h4>Sur‑mesure</h4><p>Création unique, trois essayages, main levée.</p></div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="100"><i class="fa-regular fa-pen-to-square"></i><h4>Consultation</h4><p>Conseil en image et stylisme personnel.</p></div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="200"><i class="fa-regular fa-clock"></i><h4>Ateliers</h4><p>Initiation au dessin, patronage et couture.</p></div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="300"><i class="fa-regular fa-gem"></i><h4>Haute Couture</h4><p>Pièces de collection numérotées.</p></div>
-        </div>
-    </section>
-
-    <!-- Actualités / Presse -->
-    <section id="actualites" class="section section-light">
-        <h2>Actualités</h2>
-        <div class="actu-grid">
-            <div class="actu-card" data-aos="fade-right"><span class="actu-date">15 MARS 2025</span><h4>Défilé privé</h4><p>Kristyle Lenoir présente sa collection Automne à l'Hôtel de Soubise.</p></div>
-            <div class="actu-card" data-aos="fade-up"><span class="actu-date">FÉV 2025</span><h4>Vogue Italia</h4><p>Portrait de l'atelier : « La nouvelle vague de la couture parisienne ».</p></div>
-            <div class="actu-card" data-aos="fade-left"><span class="actu-date">JAN 2025</span><h4>Atelier ouvert</h4><p>Visites privées sur rendez-vous durant la semaine de la mode.</p></div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2 style="color: var(--off-white);">Écrire & rendez‑vous</h2>
-        <div class="contact-container">
-            <div class="contact-form" data-aos="fade-right">
-                <input type="text" placeholder="Nom complet *">
-                <input type="email" placeholder="Email *">
-                <input type="text" placeholder="Projet (sur-mesure, presse…)">
-                <textarea rows="4" placeholder="Votre message..."></textarea>
-                <button>Envoyer la demande</button>
+    <!-- COLLECTIONS -->
+    <section id="collections" class="section collections">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Collections</span>
+                <h2 class="section-title">Des univers saisonniers, sculptés par la lumière</h2>
             </div>
-            <div class="contact-info" data-aos="fade-left">
-                <p><i class="fa-regular fa-envelope"></i> contact@kristylelenoir.com</p>
-                <p><i class="fa-regular fa-calendar"></i> Prendre rendez-vous en ligne</p>
-                <p><i class="fa-regular fa-map"></i> 7 rue des Saint-Pères · Paris VI</p>
-                <p><i class="fa-regular fa-clock"></i> Atelier sur rendez-vous uniquement</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            
+            <div class="collections-grid">
+                <div class="collection-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80" alt="Collection AURA 2026">
+                    </div>
+                    <div class="collection-content">
+                        <span class="collection-season">Collection printemps / été 2026</span>
+                        <h3 class="collection-title">AURA</h3>
+                        <p class="collection-description">Une ode à la lumière, aux transparences maîtrisées et aux silhouettes qui flottent sans jamais se dissoudre.</p>
+                        <a href="#contact" class="collection-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="collection-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1400&q=80" alt="Collection NOIR D'OR">
+                    </div>
+                    <div class="collection-content">
+                        <span class="collection-season">Collection automne / hiver 2025</span>
+                        <h3 class="collection-title">NOIR D'OR</h3>
+                        <p class="collection-description">Une écriture plus dense, plus royale, où le noir devient matière et l'or une respiration.</p>
+                        <a href="#contact" class="collection-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Savoir-faire</span>
+                <h2 class="section-title">Un accompagnement créatif sur mesure</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="service-icon">
+                        <i class="fa-regular fa-scissors"></i>
+                    </div>
+                    <h3 class="service-title">Sur-mesure & création personnalisée</h3>
+                    <p class="service-description">Pièces exclusives imaginées autour de votre silhouette, de votre événement et de votre identité.</p>
+                </div>
+                
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                    <h3 class="service-title">Consultation stylisme</h3>
+                    <p class="service-description">Direction esthétique, conseils de coupe, harmonies de matières et vision d'ensemble.</p>
+                </div>
+                
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3 class="service-title">Formation & ateliers</h3>
+                    <p class="service-description">Transmission du geste créatif, des bases du dessin à la compréhension du vêtement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTUALITÉS / PRESSE -->
+    <section id="actualites" class="section press">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Actualités & presse</span>
+                <h2 class="section-title">Coulisses, inspirations et regards extérieurs</h2>
+            </div>
+            
+            <div class="press-grid">
+                <div class="press-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="press-content">
+                        <span class="press-date">15 Mars 2026</span>
+                        <h3 class="press-title">Dans l'atelier : naissance d'une silhouette</h3>
+                        <p class="press-meta">Journal de création</p>
+                    </div>
+                </div>
+                
+                <div class="press-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="press-content">
+                        <span class="press-date">Février 2026</span>
+                        <h3 class="press-title">KLN entre art textile et couture contemporaine</h3>
+                        <p class="press-meta">Revue internationale</p>
+                    </div>
+                </div>
+                
+                <div class="press-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="press-content">
+                        <span class="press-date">Janvier 2026</span>
+                        <h3 class="press-title">Croquis, matières, lumière : la méthode Lenoir</h3>
+                        <p class="press-meta">Coulisses</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="press-image" data-aos="fade-up" data-aos-delay="250">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=80" alt="Coulisses de création">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="section-subtitle">Contact</span>
+                    <h2 class="section-title">Parlons de votre projet</h2>
+                    <p class="contact-text">Pour une création sur mesure, une collaboration éditoriale, une consultation ou une demande presse, contactez la maison KLN.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:contact@kristylelenoir.com">contact@kristylelenoir.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://instagram.com/kristylelenoir">@kristylelenoir</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-regular fa-calendar"></i>
+                            <a href="#" class="btn-appointment">Prendre rendez-vous en ligne</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left" data-aos-duration="1000">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Nom complet</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="project" name="project" placeholder=" ">
+                            <label for="project">Projet (sur-mesure, presse...)</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-logo">
-            <div class="mini-kln">KLN</div>
-            <span style="color: var(--gold-warm);">© Kristyle Lenoir — Maison de Couture</span>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="mini-kln">KLN</div>
+                    <div class="footer-text">
+                        <p>© Kristyle Lenoir — Maison de Couture</p>
+                        <p class="footer-tagline">L'élégance a un nom.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#a-propos">À propos</a>
+                    <a href="#creations">Créations</a>
+                    <a href="#collections">Collections</a>
+                    <a href="#services">Services</a>
+                    <a href="#actualites">Actualités</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-credit">
+                    <p>Site conçu avec <i class="fa-regular fa-heart"></i> pour la maison KLN</p>
+                </div>
+            </div>
         </div>
-        <div style="color: var(--gray-elegant);">L'élégance a un nom.</div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 50
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 80) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Particle canvas (élégant et subtil)
-        const canvas = document.getElementById('particleCanvas');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let width, height;
-            let particles = [];
-
-            function initParticles() {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                canvas.width = width;
-                canvas.height = height;
-                
-                particles = [];
-                const particleCount = 40;
-                for (let i = 0; i < particleCount; i++) {
-                    particles.push({
-                        x: Math.random() * width,
-                        y: Math.random() * height,
-                        radius: Math.random() * 2 + 0.5,
-                        speedX: (Math.random() - 0.5) * 0.2,
-                        speedY: (Math.random() - 0.5) * 0.1,
-                        color: `rgba(201, 168, 76, ${Math.random() * 0.25 + 0.1})`
-                    });
-                }
-            }
-
-            function drawParticles() {
-                ctx.clearRect(0, 0, width, height);
-                particles.forEach(p => {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = p.color;
-                    ctx.fill();
-                    
-                    p.x += p.speedX;
-                    p.y += p.speedY;
-                    
-                    if (p.x < 0) p.x = width;
-                    if (p.x > width) p.x = 0;
-                    if (p.y < 0) p.y = height;
-                    if (p.y > height) p.y = 0;
-                });
-                requestAnimationFrame(drawParticles);
-            }
-
-            window.addEventListener('resize', () => {
-                initParticles();
-            });
-
-            initParticles();
-            drawParticles();
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
