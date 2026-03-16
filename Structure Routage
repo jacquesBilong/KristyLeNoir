@@ -1,0 +1,31 @@
+kristyle-lenoir/
+├── pages/
+│   ├── index.jsx (votre composant actuel découpé)
+│   ├── collections/
+│   │   ├── [slug].jsx (page dynamique pour chaque collection)
+│   │   └── index.jsx (liste des collections)
+│   └── creations/
+│       └── [id].jsx (détail d'une création)
+├── components/
+│   ├── layout/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── Navigation.jsx
+│   ├── sections/
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Portfolio.jsx
+│   │   ├── Collections.jsx
+│   │   ├── Services.jsx
+│   │   ├── Press.jsx
+│   │   └── Contact.jsx
+│   └── ui/
+│       ├── Logo.jsx
+│       ├── Button.jsx
+│       └── Card.jsx
+├── public/
+│   └── images/
+├── styles/
+│   └── globals.css
+└── lib/
+    └── data.js (données statiques)
